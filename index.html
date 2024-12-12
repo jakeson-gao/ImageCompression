@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>图片压缩</title>
+    <title>Image Compression</title>
     <style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
 </head>
 
 <body style="margin: 0; padding: 0;">
 <div id="el">
-    <div style="color: white;background-color: #67C23A;text-align: center;font-size: 12px;padding:5px 0 5px 0;width: 100%">【没有保存，就没有泄露】【本站绝不会保存您的任何资源】【您现在可以断网（拔网线或开飞行模式）进行操作】</div>
-    <h1 style="text-align: center;">图片压缩</h1>
+    <div style="color: white;background-color: #67C23A;text-align: center;font-size: 12px;padding:5px 0 5px 0;width: 100%">【No saving means no leakage】【This site will never save any of your resources】【You can now disconnect from the internet (unplug your network cable or turn on airplane mode) to operate】</div>
+    <h1 style="text-align: center;">Image Compression</h1>
     <div style="border-top: orange 1px solid; border-bottom: orange 1px solid; height: 300px;">
         <div style="height: 100%;display: flex;flex-direction: column;justify-content: center;">
             <div style="display: flex;">
@@ -30,20 +30,20 @@
                 </div>
                 <div style="flex: 1;">
                     <div style="height: 100%;display: flex;flex-direction: column;justify-content: center;">
-                        <div>名称：<span>{{ srcImageName }}</span></div>
-                        <div>大小：<span>{{ srcImageSize }}</span></div>
-                        <div>像素：<span>{{ srcImagePixel }}</span></div>
-                        <div>类型：<span>{{ srcImageType }}</span></div>
+                        <div>Name: <span>{{ srcImageName }}</span></div>
+                        <div>Size: <span>{{ srcImageSize }}</span></div>
+                        <div>Pixels: <span>{{ srcImagePixel }}</span></div>
+                        <div>Type: <span>{{ srcImageType }}</span></div>
                         <div>
-                            期望压缩后图片最大大小：
+                            Expected maximum size after compression:
                             <input v-model.number="expectCompressedImageSizeMB" style="width: 40px;"/>MB
                             <input v-model.number="expectCompressedImageSizeKB" style="margin-left: 40px;width: 40px;"/>KB
                         </div>
                         <div>
-                            期望压缩后图片最大像素：
+                            Expected maximum pixels after compression:
                             <input v-model.number="expectCompressedImagePixel" style="width: 40px;"/>
                         </div>
-                        <button @click="handleImage()" style="width: 70px;" :disabled="reCompressedButtonDisable">重新压缩
+                        <button @click="handleImage()" style="width: 70px;" :disabled="reCompressedButtonDisable">Compress Again
                         </button>
                     </div>
                 </div>
@@ -62,9 +62,9 @@
                 </div>
                 <div style="flex: 1;">
                     <div style="height: 100%;display: flex;flex-direction: column;justify-content: center;">
-                        <div>大小：<span>{{ destImageSize }}</span></div>
-                        <div>像素：<span>{{ destImagePixel }}</span></div>
-                        <button @click="download()" style="width: 70px;" :disabled="downloadButtonDisable">下载 </button>
+                        <div>Size: <span>{{ destImageSize }}</span></div>
+                        <div>Pixels: <span>{{ destImagePixel }}</span></div>
+                        <button @click="download()" style="width: 70px;" :disabled="downloadButtonDisable">Download</button>
                     </div>
                 </div>
             </div>
